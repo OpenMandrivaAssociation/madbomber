@@ -15,7 +15,7 @@ Source7:	%{name}-48.png
 License:	GPL
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:	SDL_mixer-devel SDL_image-devel XFree86-devel libalsa-devel esound-devel
+BuildRequires:	SDL_mixer-devel SDL_image-devel X11-devel libalsa-devel esound-devel
 Patch:		madbomber-0.1.8-fix-CFLAGS.patch.bz2
 Patch1:		madbomber-0.2.4-add-keypad-keys.patch.bz2
 
