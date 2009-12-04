@@ -1,6 +1,6 @@
 %define	name	madbomber
 %define	version	0.2.5
-%define release	%mkrel 4
+%define release	%mkrel 5
 %define summary	Catch the bombs
 
 Summary:	%{summary}
@@ -16,7 +16,7 @@ License:	GPL
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	SDL_mixer-devel SDL_image-devel X11-devel libalsa-devel esound-devel
-Patch:		madbomber-0.1.8-fix-CFLAGS.patch.bz2
+Patch0:		madbomber-0.1.8-fix-CFLAGS.patch.bz2
 Patch1:		madbomber-0.2.4-add-keypad-keys.patch.bz2
 
 %description
