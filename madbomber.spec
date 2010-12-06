@@ -1,6 +1,6 @@
 %define	name	madbomber
 %define	version	0.2.5
-%define release	%mkrel 5
+%define release	%mkrel 6
 %define summary	Catch the bombs
 
 Summary:	%{summary}
