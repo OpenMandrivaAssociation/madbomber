@@ -1,6 +1,6 @@
 %define	name	madbomber
 %define	version	0.2.5
-%define release	%mkrel 6
+%define release	%mkrel 7
 %define summary	Catch the bombs
 
 Summary:	%{summary}
@@ -15,9 +15,11 @@ Source7:	%{name}-48.png
 License:	GPL
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:	SDL_mixer-devel SDL_image-devel X11-devel libalsa-devel esound-devel
-Patch0:		madbomber-0.1.8-fix-CFLAGS.patch.bz2
-Patch1:		madbomber-0.2.4-add-keypad-keys.patch.bz2
+BuildRequires:	SDL_mixer-devel
+BuildRequires:	SDL_image-devel
+BuildRequires:	SDL-devel
+Patch0:		madbomber-0.1.8-fix-CFLAGS.patch
+Patch1:		madbomber-0.2.4-add-keypad-keys.patch
 
 %description
 The Mad Bomber is loose in the city and he's dropping bombs everywhere! It's
@@ -32,29 +34,19 @@ chmod a+r -R .
 # remove .xvpics directories
 find . -type d -name .xvpics | xargs rm -rf
 
-cat <<EOF > %{name}.menu
-?package(%{name}):command="%{_gamesbindir}/%{name}" \
-		  icon=%{name}.png \
-		  needs="x11" \
-		  section="More Applications/Games/Arcade" \
-		  title="MadBomber"\
-		  longtitle="%{summary}" xdg="true"
-EOF
-
 cat << EOF > mandriva-%{name}.desktop
 [Desktop Entry]
-Encoding=UTF-8
 Name=MadBomber
 Comment=%{summary}
 Exec=%_gamesbindir/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=Game;ArcadeGame;X-MandrivaLinux-MoreApplications-Games-Arcade;
+Categories=Game;ArcadeGame;
 EOF
 
 %build
-%make CFLAGS="%{optflags}" DATA_PREFIX=%{_gamesdatadir}/%{name}/
+%make CFLAGS="%{optflags} %{ldflags}" DATA_PREFIX=%{_gamesdatadir}/%{name}/
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -90,4 +82,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*.png
 %{_miconsdir}/*.png
 %{_liconsdir}/*.png
-
