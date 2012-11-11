@@ -1,0 +1,11 @@
+--- madbomber-0.1.8/Makefile.pix	Fri Jun 30 09:27:37 2000
++++ madbomber-0.1.8/Makefile	Thu Nov  2 01:31:36 2000
+@@ -30,7 +30,7 @@
+ 
+ # Stuff we pass to the compiler:
+ 
+-CFLAGS=-Wall $(SDL_CFLAGS) \
++override CFLAGS += $(SDL_CFLAGS) \
+ 	-DDATA_PREFIX=\"$(DATA_PREFIX)\" -D$(NOSOUNDFLAG) -D$(TARGET_DEF)
+ SDL_LIB=$(MIXER) $(IMAGE) $(SDL_LDFLAGS)
+ 
