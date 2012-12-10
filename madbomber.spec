@@ -82,3 +82,106 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*.png
 %{_miconsdir}/*.png
 %{_liconsdir}/*.png
+
+
+%changelog
+* Sat Feb 05 2011 Funda Wang <fwang@mandriva.org> 0.2.5-7mdv2011.0
++ Revision: 636077
+- tighten BR
+- bunzip2 the patch
+
+* Mon Dec 06 2010 Oden Eriksson <oeriksson@mandriva.com> 0.2.5-6mdv2011.0
++ Revision: 612790
+- the mass rebuild of 2010.1 packages
+
+* Fri Dec 04 2009 Jérôme Brenier <incubusss@mandriva.org> 0.2.5-5mdv2010.1
++ Revision: 473420
+- number the first patch to fix build
+
+* Mon Jul 28 2008 Thierry Vignaud <tv@mandriva.org> 0.2.5-4mdv2009.0
++ Revision: 251640
+- rebuild
+- drop old menu
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Thu Jan 03 2008 Olivier Blin <oblin@mandriva.com> 0.2.5-2mdv2008.1
++ Revision: 140934
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - buildrequires X11-devel instead of XFree86-devel
+    - import madbomber
+
+
+* Fri Jul  7 2006 Pixel <pixel@mandriva.com> 0.2.5-2mdv2007.0
+- switch to XDG menu
+
+* Mon May 29 2006 Emmanuel Andry <eandry@mandriva.org> 0.2.5-1mdk
+- 0.2.5
+- mkrel
+
+* Tue Oct 11 2005 Pixel <pixel@mandriva.com> 0.2.4-7mdk
+- rebuild
+
+* Fri Jun  4 2004 Pixel <pixel@mandrakesoft.com> 0.2.4-6mdk
+- rebuild
+
+* Sun Mar 23 2003 Pixel <pixel@mandrakesoft.com> 0.2.4-5mdk
+- removed lurking .xvpics directories
+
+* Thu Nov 12 2002 Per �yvind Karlsen <peroyvind@delonic.no> 0.2.4-4mdk
+- Removed obsolete Prefix tag
+- Removed redundant BuildRequires
+- Cleanups
+- Added menuitem
+- Added icons
+- Moved stuff to the correct places
+
+* Thu Sep 05 2002 Lenny Cartier <lenny@mandrakesoft.com> 0.2.4-3mdk
+- rebuild
+
+* Sun Jul 21 2002 Pixel <pixel@mandrakesoft.com> 0.2.4-2mdk
+- recompile against new vorbis stuff
+
+* Thu Jun 27 2002 Pixel <pixel@mandrakesoft.com> 0.2.4-1mdk
+- new release
+
+* Mon Apr 29 2002 Pixel <pixel@mandrakesoft.com> 0.1.8-12mdk
+- rebuild for new libasound (alsa)
+
+* Tue Jan 22 2002 Stefan van der Eijk <stefan@eijk.nu> 0.1.8-11mdk
+- BuildRequires
+
+* Thu Oct 11 2001 Pixel <pixel@mandrakesoft.com> 0.1.8-10mdk
+- rebuilding for libpng3
+
+* Thu Sep 13 2001 Stefan van der Eijk <stefan@eijk.nu> 0.1.8-9mdk
+- BuildRequires: libSDL-devel
+
+* Thu Sep  6 2001 Pixel <pixel@mandrakesoft.com> 0.1.8-8mdk
+- fix rights
+- rebuild
+
+* Mon Jul  2 2001 Pixel <pixel@mandrakesoft.com> 0.1.8-7mdk
+- fix description
+
+* Mon May 14 2001 Pixel <pixel@mandrakesoft.com> 0.1.8-6mdk
+- rebuild with new SDL
+
+* Tue Dec 19 2000 Pixel <pixel@mandrakesoft.com> 0.1.8-5mdk
+- rebuild with new libSDL_mixer
+
+* Wed Nov 29 2000 Pixel <pixel@mandrakesoft.com> 0.1.8-4mdk
+- rebuild, build req
+
+* Tue Nov  7 2000 Pixel <pixel@mandrakesoft.com> 0.1.8-3mdk
+- capitalize summary
+
+* Tue Nov  7 2000 Pixel <pixel@mandrakesoft.com> 0.1.8-2mdk
+- rebuild
+
+* Thu Nov  2 2000 Pixel <pixel@mandrakesoft.com> 0.1.8-1mdk
+- initial spec
