@@ -7,7 +7,7 @@ Summary:	%{summary}
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Url:		http://newbreedsoftware.com/madbomber
+Url:		https://newbreedsoftware.com/madbomber
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/madbomber/%{name}-%{version}.tar.bz2
 Source5:	%{name}-16.png
 Source6:	%{name}-32.png
